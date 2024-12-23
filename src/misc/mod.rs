@@ -1,7 +1,7 @@
 use phper::classes::{ClassEntity, Visibility};
 use phper::modules::Module;
 
-mod static_methods;
+pub mod static_methods;
 
 pub fn register_misc_class(module: &mut Module) {
     let mut misc_class = ClassEntity::new("MSMisc");

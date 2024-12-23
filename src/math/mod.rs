@@ -3,7 +3,7 @@ use phper::{
     modules::Module,
 };
 
-mod static_methods;
+pub mod static_methods;
 
 pub fn register_math_class(module: &mut Module) {
     let mut math_class = ClassEntity::new("MSMath");

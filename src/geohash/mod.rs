@@ -3,7 +3,7 @@ use phper::{
     modules::Module,
 };
 
-mod static_methods;
+pub mod static_methods;
 
 pub fn register_geohash_class(module: &mut Module) {
     let mut geohash_class = ClassEntity::new("MSGeoHash");

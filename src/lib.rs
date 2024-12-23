@@ -3,9 +3,9 @@ use phper::{
     php_get_module,
 };
 
-mod math;
-mod geohash;
-mod misc;
+pub mod math;
+pub mod geohash;
+pub mod misc;
 
 #[php_get_module]
 pub fn get_module() -> Module {

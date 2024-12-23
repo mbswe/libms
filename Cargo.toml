@@ -6,6 +6,8 @@ authors = ["Magnus Strömberg <magnus@magnus.tech>"]
 
 [dependencies]
 phper = "0.13.1"
+geohash = "0.13.1"
+haversine = "0.2.1"
 
 [lib]
 name = "phpms"

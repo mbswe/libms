@@ -3,7 +3,8 @@ use phper::{
     php_get_module,
 };
 
-mod ms_math;
+mod math;
+mod geohash;
 
 #[php_get_module]
 pub fn get_module() -> Module {
@@ -18,7 +19,8 @@ pub fn get_module() -> Module {
     module.on_request_init(|| {});
     module.on_request_shutdown(|| {});
 
-    ms_math::register_ms_math_class(&mut module);
+    math::register_math_class(&mut module);
+    geohash::register_geohash_class(&mut module);
 
     module
 }

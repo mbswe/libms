@@ -5,14 +5,14 @@ use phper::{
 
 mod static_methods;
 
-pub fn register_ms_math_class(module: &mut Module) {
-    let mut ms_math_class = ClassEntity::new("MSMath");
+pub fn register_math_class(module: &mut Module) {
+    let mut math_class = ClassEntity::new("MSMath");
 
-    ms_math_class.add_static_method(
+    math_class.add_static_method(
         "clamp",
         Visibility::Public,
         static_methods::clamp,
     );
 
-    module.add_class(ms_math_class);
+    module.add_class(math_class);
 }

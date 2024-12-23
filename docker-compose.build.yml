@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  rust-builder:
+    image: rust:latest
+    container_name: rust_builder
+    working_dir: /usr/src/php_extension
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      /bin/sh -c "
+      rm -rf /usr/src/php_extension/target &&
+      mkdir -p /usr/src/php_extension/output &&
+      cargo build --release &&
+      cp ./target/release/libphpms.so /usr/src/php_extension/output/"
+    volumes:
+      - .:/usr/src/php_extension
+      - ./output:/output
+    environment:
+      LIBCLANG_PATH: "/usr/lib/llvm-14/lib"

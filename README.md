@@ -63,3 +63,17 @@ A class that contains miscellaneous functionality.
   ```php
   MSMisc::toExcelColumn(int $number): string
   ```
+
+## Testing the extension in docker
+
+1. **Build the extension**:
+   ```sh
+   docker-compose -f docker-compose.build.yml up --build
+    ```
+2. **Start nginx/php**:
+   ```sh
+   docker-compose -f docker-compose.runtime.yml up --build
+    ```
+3. **Access the extension**:
+    - Open your browser and navigate to `http://localhost:8080/`
+    - Edit ```www/index.php``` to make changes.

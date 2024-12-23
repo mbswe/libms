@@ -5,6 +5,7 @@ use phper::{
 
 mod math;
 mod geohash;
+mod misc;
 
 #[php_get_module]
 pub fn get_module() -> Module {
@@ -21,6 +22,7 @@ pub fn get_module() -> Module {
 
     math::register_math_class(&mut module);
     geohash::register_geohash_class(&mut module);
+    misc::register_misc_class(&mut module);
 
     module
 }

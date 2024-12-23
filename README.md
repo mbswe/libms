@@ -16,6 +16,10 @@
   - **neighbor**: A static method to calculate the neighbor of a geohash string in a given direction (N, S, E, W, NW...).
   - **neighbors**: A static method to calculate the neighbors of a geohash string in all directions (N, S, E, W, NW...).
 
+
+- **MSMisc**: A class that contains misc functionality.
+  - **toExcelColumn**: A static method to convert a number to an Excel column name.
+
 ## Usage
 ### MSMath    
 ```MSMath::clamp(mixed $value, mixed $min, mixed $max): int|float```
@@ -39,3 +43,7 @@
 ```MSGeoHash::neighbor(string $hash, string $direction): string```
 
 ```MSGeoHash::neighbors(string $hash): array```
+
+
+### MSMisc
+```MSMisc::toExcelColumn(int $number): string```

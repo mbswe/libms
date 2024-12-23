@@ -26,5 +26,11 @@ pub fn register_math_class(module: &mut Module) {
         static_methods::inverse_lerp,
     );
 
+    math_class.add_static_method(
+        "remapRange",
+        Visibility::Public,
+        static_methods::remap_range,
+    );
+
     module.add_class(math_class);
 }

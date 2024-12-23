@@ -4,6 +4,8 @@
 - **MSMath**: A class that contains mathematical utility functions.
   - **clamp**: A static method to constrain (or clamp) a numeric value between two bounds.
   - **lerp**: A static method to linearly interpolate between two values.
+  - **inverseLerp**: A static method to calculate the inverse linear interpolation of a value between two bounds.
+  - **remapRange**: A static method to remap a value from one range to another.
 
 
 - **MSGeoHash**: A class that contains geohash utility functions.
@@ -16,6 +18,10 @@
 ```MSMath::clamp(mixed $value, mixed $min, mixed $max): int|float```
 
 ```MSMath::lerp(float $start, float $end, float $t): float```
+
+```MSMath::inverseLerp(float $start, float $end, float $value): float```
+
+```MSMath::remapRange(float $value, float $oldMin, float $oldMax, float $newMin, float $newMax): float```
 
 
 ### MSGeoHash

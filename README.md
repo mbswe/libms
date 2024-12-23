@@ -13,6 +13,8 @@
   - **encode**: A static method to encode a latitude and longitude into a geohash string.
   - **decode**: A static method to decode a geohash string into a latitude and longitude.
   - **distance**: A static method to calculate the distance between two geohash strings. Returns the distance in kilometers.
+  - **neighbor**: A static method to calculate the neighbor of a geohash string in a given direction (N, S, E, W, NW...).
+  - **neighbors**: A static method to calculate the neighbors of a geohash string in all directions (N, S, E, W, NW...).
 
 ## Usage
 ### MSMath    
@@ -33,3 +35,7 @@
 ```MSGeoHash::decode(string $hash): array```
 
 ```MSGeoHash::distance(string $hash1, string $hash2): float```
+
+```MSGeoHash::neighbor(string $hash, string $direction): string```
+
+```MSGeoHash::neighbors(string $hash): array```

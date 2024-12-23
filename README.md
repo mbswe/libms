@@ -1,49 +1,65 @@
+## Classes and Methods
 
-## Overview
+### MSMath
+A class that contains mathematical utility functions.
 
-- **MSMath**: A class that contains mathematical utility functions.
-  - **clamp**: A static method to constrain (or clamp) a numeric value between two bounds.
-  - **lerp**: A static method to linearly interpolate between two values.
-  - **inverseLerp**: A static method to calculate the inverse linear interpolation of a value between two bounds.
-  - **remapRange**: A static method to remap a value from one range to another.
-  - **mean**: A static method to calculate the mean of an array of numbers.
+- **clamp**: Constrain (or clamp) a numeric value between two bounds.
+  ```php
+  MSMath::clamp(mixed $value, mixed $min, mixed $max): int|float
+  ```
 
+- **lerp**: Linearly interpolate between two values.
+  ```php
+  MSMath::lerp(float $start, float $end, float $t): float
+  ```
 
-- **MSGeoHash**: A class that contains geohash utility functions.
-  - **encode**: A static method to encode a latitude and longitude into a geohash string.
-  - **decode**: A static method to decode a geohash string into a latitude and longitude.
-  - **distance**: A static method to calculate the distance between two geohash strings. Returns the distance in kilometers.
-  - **neighbor**: A static method to calculate the neighbor of a geohash string in a given direction (N, S, E, W, NW...).
-  - **neighbors**: A static method to calculate the neighbors of a geohash string in all directions (N, S, E, W, NW...).
+- **inverseLerp**: Calculate the inverse linear interpolation of a value between two bounds.
+  ```php
+  MSMath::inverseLerp(float $start, float $end, float $value): float
+  ```
 
+- **remapRange**: Remap a value from one range to another.
+  ```php
+  MSMath::remapRange(float $value, float $oldMin, float $oldMax, float $newMin, float $newMax): float
+  ```
 
-- **MSMisc**: A class that contains misc functionality.
-  - **toExcelColumn**: A static method to convert a number to an Excel column name.
-
-## Usage
-### MSMath    
-```MSMath::clamp(mixed $value, mixed $min, mixed $max): int|float```
-
-```MSMath::lerp(float $start, float $end, float $t): float```
-
-```MSMath::inverseLerp(float $start, float $end, float $value): float```
-
-```MSMath::remapRange(float $value, float $oldMin, float $oldMax, float $newMin, float $newMax): float```
-
-```MSMath::mean(array $values): float```
-
+- **mean**: Calculate the mean of an array of numbers.
+  ```php
+  MSMath::mean(array $values): float
+  ```
 
 ### MSGeoHash
-```MSGeoHash::encode(float $latitude, float $longitude, int $precision = 12): string```
+A class that contains geohash utility functions.
 
-```MSGeoHash::decode(string $hash): array```
+- **encode**: Encode a latitude and longitude into a geohash string.
+  ```php
+  MSGeoHash::encode(float $latitude, float $longitude, int $precision = 12): string
+  ```
 
-```MSGeoHash::distance(string $hash1, string $hash2): float```
+- **decode**: Decode a geohash string into a latitude and longitude.
+  ```php
+  MSGeoHash::decode(string $hash): array
+  ```
 
-```MSGeoHash::neighbor(string $hash, string $direction): string```
+- **distance**: Calculate the distance between two geohash strings. Returns the distance in kilometers.
+  ```php
+  MSGeoHash::distance(string $hash1, string $hash2): float
+  ```
 
-```MSGeoHash::neighbors(string $hash): array```
+- **neighbor**: Calculate the neighbor of a geohash string in a given direction (N, S, E, W, NW...).
+  ```php
+  MSGeoHash::neighbor(string $hash, string $direction): string
+  ```
 
+- **neighbors**: Calculate the neighbors of a geohash string in all directions (N, S, E, W, NW...).
+  ```php
+  MSGeoHash::neighbors(string $hash): array
+  ```
 
 ### MSMisc
-```MSMisc::toExcelColumn(int $number): string```
+A class that contains miscellaneous functionality.
+
+- **toExcelColumn**: Convert a number to an Excel column name.
+  ```php
+  MSMisc::toExcelColumn(int $number): string
+  ```

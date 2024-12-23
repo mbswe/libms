@@ -20,5 +20,11 @@ pub fn register_math_class(module: &mut Module) {
         static_methods::lerp,
     );
 
+    math_class.add_static_method(
+        "inverseLerp",
+        Visibility::Public,
+        static_methods::inverse_lerp,
+    );
+
     module.add_class(math_class);
 }

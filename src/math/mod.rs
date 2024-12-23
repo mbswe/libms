@@ -32,5 +32,11 @@ pub fn register_math_class(module: &mut Module) {
         static_methods::remap_range,
     );
 
+    math_class.add_static_method(
+        "mean",
+        Visibility::Public,
+        static_methods::mean,
+    );
+
     module.add_class(math_class);
 }

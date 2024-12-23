@@ -64,6 +64,11 @@ A class that contains miscellaneous functionality.
   MSMisc::toExcelColumn(int $number): string
   ```
 
+- **fromExcelColumn**: Convert an Excel column name to a number.
+  ```php
+  MSMisc::fromExcelColumn(string $column): int
+  ```
+
 ## Testing the extension in docker
 
 1. **Build the extension**:

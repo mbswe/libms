@@ -12,5 +12,11 @@ pub fn register_misc_class(module: &mut Module) {
         crate::misc::static_methods::to_excel_column,
     );
 
+    misc_class.add_static_method(
+        "fromExcelColumn",
+        Visibility::Public,
+        crate::misc::static_methods::from_excel_column,
+    );
+
     module.add_class(misc_class);
 }

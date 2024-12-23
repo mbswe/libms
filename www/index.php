@@ -17,3 +17,4 @@ echo "<br>";
 
 // MSMisc example
 echo "To Excel Column: " . MSMisc::toExcelColumn(28) . "<br>";
+echo "From Excel Column: " . MSMisc::fromExcelColumn("AB") . "<br>";
